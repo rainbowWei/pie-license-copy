@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script src="jquery-1.11.3.js"></script>
+<script>
+
+  let data = {
+    "name": "ding",
+    "passwd": "dingding"
+  };
+  $.ajax({
+    url:"http://211.154.196.244:9000/license/license/v1/user/login",
+    type:"post",
+//    dataType:"text",
+    data:JSON.stringify(data),
+    success:function (result) {
+      console.log(result)
+    },
+    error:function (error) {
+      console.log(error)
+    }
+  })
+</script>
+</body>
+</html>
